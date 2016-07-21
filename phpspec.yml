@@ -1,0 +1,4 @@
+suites:
+    acme_suite:
+        psr4_prefix: Http\Message\Guzzle
+        namespace: Http\Message\Guzzle

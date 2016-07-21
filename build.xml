@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Guzzle Message Factory" default="all">
+
+    <target name="phpcs" description="runs phpcs">
+        <exec executable="bin/phpcs" passthru="true" checkreturn="true">
+            <arg line="--report=emacs
+                --standard=ruleset.xml
+                --extensions=php"/>
+        </exec>
+    </target>
+
+    <target name="phpmd" description="runs phpmd">
+        <exec executable="bin/phpmd" passthru="true" checkreturn="true">
+            <arg line="src text phpmd.xml --suffixes php"/>
+        </exec>
+    </target>
+
+    <target name="quality" depends="phpcs,phpmd" description="runs code quality tools: phpmd and phpcs"/>
+
+    <target name="phpspec" description="runs phpspec tests">
+        <exec executable="bin/phpspec" passthru="true" checkreturn="true">
+            <arg line="run
+                --format=pretty"/>
+        </exec>
+    </target>
+
+    <target name="tests" depends="phpspec" description="runs phpspec tests"/>
+
+    <target name="all" depends="quality,tests" description="runs quality tools and tests"/>
+
+</project>

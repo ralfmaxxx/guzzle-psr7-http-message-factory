@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="GuzzleMessageFactory">
+    <description>Guzzle Message Factory coding standard</description>
+    <file>src</file>
+    <rule ref="PSR1"/>
+    <rule ref="PSR2"/>
+</ruleset>
