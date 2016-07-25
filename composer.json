@@ -1,5 +1,5 @@
 {
-    "name": "ralfmaxxx/guzzle-http-message-factory",
+    "name": "ralfmaxxx/guzzle-psr7-http-message-factory",
     "description": "Implements php-http/message-factory interfaces for guzzle/psr7",
     "minimum-stability": "stable",
     "license": "BSD",
